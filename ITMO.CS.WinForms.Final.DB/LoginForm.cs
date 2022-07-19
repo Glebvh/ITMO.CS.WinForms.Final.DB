@@ -23,7 +23,7 @@ namespace ITMO.CS.WinForms.Final.DB
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=LAPTOP-54GSHBB5\SQLEXPRESS"))
+                using (SqlConnection conn = new SqlConnection(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=."))
                 {
                     conn.Open();
 

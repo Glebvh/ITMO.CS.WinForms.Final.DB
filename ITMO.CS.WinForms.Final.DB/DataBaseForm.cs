@@ -27,14 +27,14 @@ namespace ITMO.CS.WinForms.Final.DB
 
             RefreshTable();
         }
-
+        
         public void RefreshTable()
         {
             try
             {
                 dataGridView1.Rows.Clear();
 
-                using (SqlConnection conn = new SqlConnection(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=LAPTOP-54GSHBB5\SQLEXPRESS"))
+                using (SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=."))
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand("Select * from tContent", conn))
@@ -81,7 +81,7 @@ namespace ITMO.CS.WinForms.Final.DB
                 var color = textBoxAdd_Color.Text;
                 var qty = textBoxAdd_Qty.Text;
 
-                using (SqlConnection conn = new SqlConnection(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=LAPTOP-54GSHBB5\SQLEXPRESS"))
+                using (SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=."))
                 {
                     conn.Open();
 
@@ -102,7 +102,7 @@ namespace ITMO.CS.WinForms.Final.DB
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=LAPTOP-54GSHBB5\SQLEXPRESS"))
+                using (SqlConnection conn = new SqlConnection("Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=WFdb;Data Source=."))
                 {
                     conn.Open();
 
